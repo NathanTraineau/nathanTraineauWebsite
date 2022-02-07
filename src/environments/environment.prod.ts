@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  appBaseHref: 'https://nathan-traineau.com/',
 };

@@ -6,12 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy:development": " rm -rf dist && yarn build && aws s3 --profile account1 sync dist s3://development-nathan-traineau-website/",
+    "deploy:production": " rm -rf dist && yarn build && aws s3 --profile account1 sync dist s3://nathan-traineau-website/"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
-    "@angular/cdk": "^13.0.2",
+    "@angular/cdk": "^13.1.1",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
@@ -20,7 +22,13 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
-    "rxjs": "~7.4.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@types/chart.js": "^2.9.35",
+    "angular-bootstrap-md": "^12.1.0",
+    "animate.css": "^4.1.1",
+    "chart.js": "2.5.0",
+    "hammerjs": "^2.0.8",
+    "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

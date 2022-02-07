@@ -1,1 +1,26 @@
-<p>resume-page works!</p>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="wrapper">
+    <a class="button" href="../../../assets/cv-nathan-26-12621.png" download="CV-nathan-traineau">Download</a>
+    <img id="myCV" (click)="openDocument(cvPath)"  alt="rtyuio" class="cv" src={{cvPath}}>
+
+    <!-- The Modal -->
+    <div [ngStyle]='{display: modal}' id="myModal" class="modal" (click)="closeDocument($event)" >
+
+        <!-- The Close Button -->
+        
+
+        <!-- Modal Content (The Image) -->
+        <img [src]="modalImgPath" class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+</div>
+</body>
+</html>
